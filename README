@@ -1,0 +1,74 @@
+rox-session
+------------------------------------------
+ROX is a fast, user friendly desktop based on RISC OS which makes 
+extensive use of drag-and-drop. The interface revolves around the file 
+manager, or filer, following the traditional Unix view that `everything 
+is a file' rather than trying to hide the filesystem beneath start 
+menus, wizards, or druids.
+
+This package provides an X session manager.
+
+Runtime requirements:
+  cygwin-1.7.0-62
+  libdbus-glib_1_2-0.80-10
+  libdbus1_3-1.2.16-1
+  libgcc1-4.3.4-1
+  libgconf2_4-2.26.2-1
+  libgdk_pixbuf2.0_0-2.16.6-1
+  libglib2.0_0-2.20.5-1
+  libgtk2.0_0-2.16.6-1
+  libpango1.0_0-1.24.5-1
+  libX11_6-1.3.1-1
+  libXext6-1.1-1
+  libxml2-2.7.3-11
+  libXtst6-1.1.0-1
+  OroboROX-0.9.8-1
+  python-2.5.4-10
+  python-dbus-0.83.0-10
+  python-gobject2.0-2.18.0-1
+  python-gtk2.0-2.16.0-1
+  rox-filer-2.10-1
+  rox-lib2-2.0.6-1
+
+Build requirements:
+(besides corresponding devel packages)
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-4.3.4-1
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
+
+Canonical website:
+  http://roscidus.com/desktop/ROX-Session
+
+Canonical download:
+  http://downloads.sourceforge.net/rox/
+
+-------------------------------------------
+
+Build instructions:
+  unpack rox-session-0.41.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./rox-session-0.41.0-X.cygport all
+
+This will create:
+  /usr/src/rox-session-0.41.0-X-src.tar.bz2
+  /usr/src/rox-session-0.41.0-X.tar.bz2
+
+For a list of files included in the binary package, run from the 
+command-line: 'cygcheck -cd rox-session'.
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.41.0-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
