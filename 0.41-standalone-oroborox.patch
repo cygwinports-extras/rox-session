@@ -1,5 +1,16 @@
 Otherwise, OroboROX is the default only if zero-install is available.
 
+--- origsrc/ROX-Session/setup.py	2008-07-01 19:32:46.000000000 -0500
++++ src/ROX-Session/setup.py	2011-06-19 20:45:42.700850000 -0500
+@@ -94,7 +94,7 @@ fi
+ 
+ # Load a window manager. Keep trying until we find one that works!
+ 
+-for wm in openbox xfwm4 sawfish enlightenment wmaker icewm blackbox fluxbox \\
++for wm in OroboROX openbox xfwm4 sawfish enlightenment wmaker icewm blackbox fluxbox \\
+ 	metacity kwin kwm fvwm2 fvwm 4Dwm twm; do
+   if [ -x "`which $wm`" ]; then break; fi;
+ done
 --- origsrc/ROX-Session/src/wm.c	2008-07-01 19:32:46.000000000 -0500
 +++ src/ROX-Session/src/wm.c	2009-10-19 11:26:51.070841900 -0500
 @@ -261,7 +261,7 @@ static void run_wm(const char *wm)

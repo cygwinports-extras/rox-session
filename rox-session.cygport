@@ -1,8 +1,14 @@
 inherit rox
 
+NAME="rox-session"
+VERSION=0.41.0
+RELEASE=3
+CATEGORY="ROX X11"
+SUMMARY="ROX session manager"
+REQUIRES="cygutils dbus OroboROX rox-filer xinit"
+
 SRC_URI="mirror://sourceforge/rox/${P}.tar.gz"
 SRC_DIR=.
-
 PATCH_URI="0.41-standalone-oroborox.patch"
 
 ROX_APP="ROX-Session"
