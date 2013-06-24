@@ -5,11 +5,12 @@ VERSION=0.41.0
 RELEASE=3
 CATEGORY="ROX X11"
 SUMMARY="ROX session manager"
-REQUIRES="cygutils dbus OroboROX rox-filer xinit"
+REQUIRES="dbus OroboROX rox-filer xinit"
 
-SRC_URI="mirror://sourceforge/rox/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/rox/${NAME}-${VERSION}.tar.gz"
 SRC_DIR=.
-PATCH_URI="0.41-standalone-oroborox.patch"
+PATCH_URI="0.41-standalone-oroborox.patch
+	   0.41-no-strip.patch"
 
 ROX_APP="ROX-Session"
 ROX_WRAPPER=${PN}

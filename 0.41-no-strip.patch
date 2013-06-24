@@ -1,0 +1,21 @@
+--- origsrc/ROX-Session/src/Makefile.in	2009-09-06 15:21:35.000000000 -0500
++++ src/ROX-Session/src/Makefile.in	2013-06-23 21:12:55.629593600 -0500
+@@ -41,18 +41,10 @@ gsm-presence-glue.h: org.gnome.SessionMa
+ ${PROG}: ${OBJECTS}
+ 	${CC} -o "${PROG}" ${OBJECTS} ${LDFLAGS}
+ 	mv "${PROG}" "${PLATFORM_DIR}"
+-	-(cd "${PLATFORM_DIR}" && \
+-	 objcopy --only-keep-debug ROX-Session ROX-Session.dbg && \
+-	 strip ROX-Session && \
+-	 objcopy --add-gnu-debuglink=ROX-Session.dbg ROX-Session)
+ 
+ ${IDLE_PROG}: ${IDLE_OBJECTS}
+ 	${CC} -o "${IDLE_PROG}" ${IDLE_OBJECTS} ${IDLE_LDFLAGS}
+ 	mv "${IDLE_PROG}" "${PLATFORM_DIR}"
+-	-(cd "${PLATFORM_DIR}" && \
+-	 objcopy --only-keep-debug ${IDLE_PROG} ${IDLE_PROG}.dbg && \
+-	 strip ${IDLE_PROG} && \
+-	 objcopy --add-gnu-debuglink=${IDLE_PROG}.dbg ${IDLE_PROG})
+ 
+ gsm-presence.o: gsm-presence-glue.h
+ 
