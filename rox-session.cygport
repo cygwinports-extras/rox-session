@@ -2,10 +2,10 @@ inherit rox
 
 NAME="rox-session"
 VERSION=0.41.0
-RELEASE=3
+RELEASE=4
 CATEGORY="ROX X11"
 SUMMARY="ROX session manager"
-REQUIRES="dbus OroboROX rox-filer xinit"
+REQUIRES="dbus-x11 OroboROX rox-filer run xinit"
 
 SRC_URI="mirror://sourceforge/rox/${NAME}-${VERSION}.tar.gz"
 SRC_DIR=.
