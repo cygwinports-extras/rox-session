@@ -2,7 +2,7 @@ inherit rox
 
 NAME="rox-session"
 VERSION=0.41.0
-RELEASE=4
+RELEASE=5
 CATEGORY="ROX X11"
 SUMMARY="ROX session manager"
 REQUIRES="dbus-x11 OroboROX rox-filer run xinit"
@@ -14,3 +14,18 @@ PATCH_URI="0.41-standalone-oroborox.patch
 
 ROX_APP="ROX-Session"
 ROX_WRAPPER=${PN}
+
+src_install() {
+	cd ${B}
+	rox_install
+
+	dodir /usr/share/xsessions
+	cat > ${D}/usr/share/xsessions/rox.desktop <<_EOF
+[Desktop Entry]
+Name=ROX
+Comment=ROX Desktop
+Exec=/usr/bin/rox-session -w
+TryExec=rox-session
+Type=Application
+_EOF
+}
