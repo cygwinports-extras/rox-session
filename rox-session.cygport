@@ -2,7 +2,7 @@ inherit rox
 
 NAME="rox-session"
 VERSION=0.41.0
-RELEASE=5
+RELEASE=6
 CATEGORY="ROX X11"
 SUMMARY="ROX session manager"
 REQUIRES="dbus-x11 OroboROX rox-filer run xinit"
